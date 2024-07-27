@@ -1,15 +1,24 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
-
-
+import { createRouter, createWebHistory } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import Check from './components/Check.vue'
+import HeroSection from './core/HeroSection.vue'
+import MainLayout from './core/views/MainLayout.vue'
 
 const routes = [
-  { path: '/hangul-alphabet', name: 'hangulAlphabet',  component: Check },
-  { path: '/test', name: 'test', component: HelloWorld },
+  { path: '/', name: 'landing',  component: HeroSection },
+  {
+    path: "/dashboard/",
+    component: MainLayout,
+    children : [
+      { path: '', redirect: { name: 'hangulAlphabet' } },
+      { path: 'hangul-alphabet', name: 'hangulAlphabet',  component: Check },
+      { path: 'test', name: 'test', component: HelloWorld },
+    ]
+
+  }
 ]
 
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 })

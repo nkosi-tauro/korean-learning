@@ -29,8 +29,8 @@ import { useDashboardStore } from '../store/dashboard';
 const store = useDashboardStore();
 
 const navigation = [
-  { name: 'Hangul Alphabet', href: '/hangul-alphabet', icon: HomeIcon },
-  { name: 'Dictionary', href: '/test', icon: UsersIcon },
+  { name: 'Hangul Alphabet', href: '/dashboard/hangul-alphabet', icon: HomeIcon },
+  { name: 'Dictionary', href: '/dashboard/test', icon: UsersIcon },
 ]
 
 </script>
