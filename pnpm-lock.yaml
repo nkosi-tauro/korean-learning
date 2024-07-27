@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@headlessui/vue':
+        specifier: ^1.7.22
+        version: 1.7.22(vue@3.4.34(typescript@5.5.4))
+      '@heroicons/vue':
+        specifier: ^2.1.5
+        version: 2.1.5(vue@3.4.34(typescript@5.5.4))
+      '@tailwindcss/forms':
+        specifier: ^0.5.7
+        version: 0.5.7(tailwindcss@3.4.7)
       i18next:
         specifier: ^23.12.2
         version: 23.12.2
@@ -23,6 +32,9 @@ importers:
       vue:
         specifier: ^3.4.31
         version: 3.4.34(typescript@5.5.4)
+      vue-router:
+        specifier: '4'
+        version: 4.4.0(vue@3.4.34(typescript@5.5.4))
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.23.2
@@ -331,6 +343,17 @@ packages:
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@headlessui/vue@1.7.22':
+    resolution: {integrity: sha512-Hoffjoolq1rY+LOfJ+B/OvkhuBXXBFgd8oBlN+l1TApma2dB0En0ucFZrwQtb33SmcCqd32EQd0y07oziXWNYg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^3.2.0
+
+  '@heroicons/vue@2.1.5':
+    resolution: {integrity: sha512-IpqR72sFqFs55kyKfFS7tN+Ww6odFNeH/7UxycIOrlVYfj4WUGAdzQtLBnJspucSeqWFQsKM0g0YrgU655BEfA==}
+    peerDependencies:
+      vue: '>= 3'
+
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
     engines: {node: '>=12.22'}
@@ -493,6 +516,19 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
+
+  '@tailwindcss/forms@0.5.7':
+    resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+
+  '@tanstack/virtual-core@3.8.3':
+    resolution: {integrity: sha512-vd2A2TnM5lbnWZnHi9B+L2gPtkSeOtJOAw358JqokIH1+v2J7vUAzFVPwB/wrye12RFOurffXu33plm4uQ+JBQ==}
+
+  '@tanstack/vue-virtual@3.8.3':
+    resolution: {integrity: sha512-xrFLkOiqLoGwohgr1+Q880hkNdQWqwi19EXzx38iAjVEm1Db3KIAV0aVP57/dnNXU3NO1Vx8wnIHII5J4n1LyA==}
+    peerDependencies:
+      vue: ^2.7.0 || ^3.0.0
 
   '@types/eslint@8.56.11':
     resolution: {integrity: sha512-sVBpJMf7UPo/wGecYOpk2aQya2VUGeHhe38WG7/mN5FufNSubf5VT9Uh9Uyp8/eLJpu1/tuhJ/qTo4mhSB4V4Q==}
@@ -1467,6 +1503,10 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
 
+  mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
@@ -2007,6 +2047,11 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
+  vue-router@4.4.0:
+    resolution: {integrity: sha512-HB+t2p611aIZraV2aPSRNXf0Z/oLZFrlygJm+sZbdJaW6lcFqEDQwnzUBXn+DApw+/QzDU/I9TeWx9izEjTmsA==}
+    peerDependencies:
+      vue: ^3.2.0
+
   vue-tsc@2.0.29:
     resolution: {integrity: sha512-MHhsfyxO3mYShZCGYNziSbc63x7cQ5g9kvijV7dRe1TTXBRLxXyL0FnXWpUF1xII2mJ86mwYpYsUmMwkmerq7Q==}
     hasBin: true
@@ -2288,6 +2333,15 @@ snapshots:
 
   '@eslint/object-schema@2.1.4': {}
 
+  '@headlessui/vue@1.7.22(vue@3.4.34(typescript@5.5.4))':
+    dependencies:
+      '@tanstack/vue-virtual': 3.8.3(vue@3.4.34(typescript@5.5.4))
+      vue: 3.4.34(typescript@5.5.4)
+
+  '@heroicons/vue@2.1.5(vue@3.4.34(typescript@5.5.4))':
+    dependencies:
+      vue: 3.4.34(typescript@5.5.4)
+
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.3.0': {}
@@ -2436,6 +2490,18 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  '@tailwindcss/forms@0.5.7(tailwindcss@3.4.7)':
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.4.7
+
+  '@tanstack/virtual-core@3.8.3': {}
+
+  '@tanstack/vue-virtual@3.8.3(vue@3.4.34(typescript@5.5.4))':
+    dependencies:
+      '@tanstack/virtual-core': 3.8.3
+      vue: 3.4.34(typescript@5.5.4)
 
   '@types/eslint@8.56.11':
     dependencies:
@@ -3539,6 +3605,8 @@ snapshots:
 
   min-indent@1.0.1: {}
 
+  mini-svg-data-uri@1.4.4: {}
+
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.11
@@ -4045,6 +4113,11 @@ snapshots:
       semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
+
+  vue-router@4.4.0(vue@3.4.34(typescript@5.5.4)):
+    dependencies:
+      '@vue/devtools-api': 6.6.3
+      vue: 3.4.34(typescript@5.5.4)
 
   vue-tsc@2.0.29(typescript@5.5.4):
     dependencies:
