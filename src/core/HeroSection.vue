@@ -2,16 +2,13 @@
 import { ref } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, SunIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { useDark, useToggle } from '@vueuse/core';
+import ThemeToggle from './components/ThemeToggle.vue';
 
 const mobileMenuOpen = ref(false)
-const isDark = useDark()
-const toggleDarkMode = useToggle(isDark)
-
 </script>
 
 <template>
-  <div class="bg-white dark:bg-gray-900">
+  <div class="bg-white dark:bg-black">
     <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
@@ -27,7 +24,7 @@ const toggleDarkMode = useToggle(isDark)
           </button>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <button><SunIcon @click="toggleDarkMode()" class="h-6 w-6 mr-4 dark:text-yellow-500 "/></button>
+          <ThemeToggle/>
           <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white ">Log in <span aria-hidden="true">&rarr;</span></a>
         </div>
       </nav>

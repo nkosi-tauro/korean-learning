@@ -25,6 +25,7 @@ import {
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 import { RouterView } from 'vue-router';
 import { useDashboardStore } from '../store/dashboard';
+import ThemeToggle from '../components/ThemeToggle.vue';
 import DashboardSideBar from './DashboardSideBar.vue';
 import DashboardProfileDropdown from './DashboardProfileDropdown.vue';
 
@@ -52,8 +53,8 @@ const store = useDashboardStore();
           </div>
           <div class="flex items-center gap-x-4 lg:gap-x-6">
             <button type="button" class="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
-              <span class="sr-only">View notifications</span>
-              <BellIcon class="h-6 w-6" aria-hidden="true" />
+              <span class="sr-only">Toggle Theme</span>
+              <ThemeToggle/>
             </button>
 
             <!-- Separator -->
