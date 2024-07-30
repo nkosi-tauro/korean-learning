@@ -1,6 +1,6 @@
 export interface Hangul_Alphabet {
   id: number,
-  vowel: string,
+  character: string,
   identifier: string,
   audio: string,
   pronounciation: string,

@@ -4,7 +4,10 @@ import { supabase } from "../../lib/supabase";
 import type { Hangul_Alphabet } from "../models/hangul";
 
 export const useHangulStore = defineStore("hangul", () => {
-  const hangulAlphabet  = ref([] as Hangul_Alphabet[]) || null
+  const hangulAlphabet = ref([] as Hangul_Alphabet[]) || null
+  const vowels = ref([] as Hangul_Alphabet[]);
+  const consonants = ref([] as Hangul_Alphabet[]);
+
   const database_error = ref("" as unknown) 
   const loading =  ref(false)
 
@@ -16,6 +19,8 @@ export const useHangulStore = defineStore("hangul", () => {
 
       if (data) {
         hangulAlphabet.value = data as Hangul_Alphabet[]
+        vowels.value = hangulAlphabet.value.filter(character => character.identifier === 'Vowel')
+        consonants.value = hangulAlphabet.value.filter(character => character.identifier === 'Consonant')
       } 
     }
     catch(error) {
@@ -27,5 +32,5 @@ export const useHangulStore = defineStore("hangul", () => {
     }
   }
 
-  return { hangulAlphabet, getHangul , database_error, loading}
+  return { hangulAlphabet, getHangul , database_error, loading, vowels, consonants}
 })
