@@ -14,8 +14,8 @@ import DashboardTopNavigation from './DashboardTopNavigation.vue';
       <!-- Dashboard Top Navigation -->
       <DashboardTopNavigation/>
 
-      <main class="py-10 dark:bg-slate-800">
-        <div class="px-4 sm:px-6 lg:px-8">
+      <main class="py-10">
+        <div class="px-4 sm:px-6 lg:px-8 dark:bg-gray-900">
           <!-- Main Content -->
           <RouterView/>
         </div>
